@@ -18,7 +18,7 @@ const Team = () => {
       name: "Aiden",
       image: aidenImage,
       role: "Software Developer",
-      bio: "Hi! I'm Aiden I'm a Senior at Virginia City High School and am also studying for a degree in electrical engineering at Western Nevada College this is my third year on the team and I'm very hyped for this season. I love software development and programming and am always up for a challenge recently I've taken intrest in cars and love fixing them. I'm so excited for this season and am so proud of how much I've learned"
+      bio: "Heres my bio for the site: Hi! My name is Aiden and im the software lead for the VC Silver Circuits, I love programming and being able to see it put into action through robotics. This is my fourth year in FTC and my second year as Software Lead. I'm currently a Senior at Virginia City High School while getting my associates of Science from Western Nevada College. I'm very excited for this season and all the possibilities it has for me"
     },
     {
       name: "Tucker",
@@ -42,7 +42,7 @@ const Team = () => {
       name: "William",
       image: williamImage,
       role: "Builder & Designer",
-      bio: "I'm William, I joined the team in 2023. I am a Junior in high school, and I am looking forward to learning about more robotics. So far, I have learned a lot about things like 3D printing, building, designing, and planning. Last year I learned a lot about the design process of designing a working robot. I am hoping we will design a cool robot this year."
+      bio: "I'm William, I joined the team in 2023. I am a Junior at TMCC high school. I learned a lot from being one of the drivers on our team last year. This year I have been learning Java and I am looking forward to learning about more CAD and programming. I have learned a lot about 3D printing, building, driving, designing, and planning.  I enjoy learning about the process of designing a working robot. I am hoping we will design a cool robot this year!."
     },
     {
       name: "Shaylee",
