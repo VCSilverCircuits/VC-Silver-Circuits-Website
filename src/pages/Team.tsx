@@ -18,7 +18,7 @@ const Team = () => {
       name: "Aiden",
       image: aidenImage,
       role: "Software Developer",
-      bio: "Heres my bio for the site: Hi! My name is Aiden and im the software lead for the VC Silver Circuits, I love programming and being able to see it put into action through robotics. This is my fourth year in FTC and my second year as Software Lead. I'm currently a Senior at Virginia City High School while getting my associates of Science from Western Nevada College. I'm very excited for this season and all the possibilities it has for me"
+      bio: "Hi! My name is Aiden and im the software lead for the VC Silver Circuits, I love programming and being able to see it put into action through robotics. This is my fourth year in FTC and my second year as Software Lead. I'm currently a Senior at Virginia City High School while getting my associates of Science from Western Nevada College. I'm very excited for this season and all the possibilities it has for me"
     },
     {
       name: "Tucker",
