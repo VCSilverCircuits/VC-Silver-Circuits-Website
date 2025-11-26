@@ -5,6 +5,10 @@ import path from "path";
 export default defineConfig({
   base: "/",
   plugins: [react()],
+  server: {
+
+    allowedHosts: ["vite.awdevsoftware.org"], // Add your allowed hosts
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

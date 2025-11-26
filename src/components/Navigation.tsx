@@ -12,6 +12,8 @@ import {
 const Navigation = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [robotsOpen, setRobotsOpen] = useState(false);
+  const [teamOpen, setTeamOpen] = useState(false);
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -113,52 +115,68 @@ const Navigation = () => {
               {navItems.map((item) =>
                 item.label === "Robots" ? (
                   <div key={item.href} className="flex flex-col">
-                    <Button variant={isActive(item.href) ? "default" : "ghost"} className="justify-start" asChild>
-                      <Link to="/into-the-deep-robot" onClick={() => setIsOpen(false)}>
-                        {item.label}
-                      </Link>
+                    <Button 
+                      variant={isActive(item.href) ? "default" : "ghost"} 
+                      className="justify-start" 
+                      onClick={() => setRobotsOpen(!robotsOpen)}
+                    >
+                      {item.label}
                     </Button>
-                    <div className="pl-4 flex flex-col space-y-1">
-                      <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/into-the-deep-robot" onClick={() => setIsOpen(false)}>
-                          2024-2025 Into The Deep
-                        </Link>
-                      </Button>
-                      <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/center-stage-robot" onClick={() => setIsOpen(false)}>
-                          2023-2024 Center Stage
-                        </Link>
-                      </Button>
-                      <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/power-play-robot" onClick={() => setIsOpen(false)}>
-                          2022-2023 Power Play
-                        </Link>
-                      </Button>
+                    <div 
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        robotsOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      <div className="pl-4 flex flex-col space-y-1 pt-1">
+                        <Button variant="ghost" className="justify-start" asChild>
+                          <Link to="/into-the-deep-robot" onClick={() => setIsOpen(false)}>
+                            2024-2025 Into The Deep
+                          </Link>
+                        </Button>
+                        <Button variant="ghost" className="justify-start" asChild>
+                          <Link to="/center-stage-robot" onClick={() => setIsOpen(false)}>
+                            2023-2024 Center Stage
+                          </Link>
+                        </Button>
+                        <Button variant="ghost" className="justify-start" asChild>
+                          <Link to="/power-play-robot" onClick={() => setIsOpen(false)}>
+                            2022-2023 Power Play
+                          </Link>
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 ) : item.label === "Team" ? (
                   <div key={item.href} className="flex flex-col">
-                    <Button variant={isActive(item.href) ? "default" : "ghost"} className="justify-start" asChild>
-                      <Link to="/team" onClick={() => setIsOpen(false)}>
-                        {item.label}
-                      </Link>
+                    <Button 
+                      variant={isActive(item.href) ? "default" : "ghost"} 
+                      className="justify-start" 
+                      onClick={() => setTeamOpen(!teamOpen)}
+                    >
+                      {item.label}
                     </Button>
-                    <div className="pl-4 flex flex-col space-y-1">
-                      <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/team" onClick={() => setIsOpen(false)}>
-                          Our Members
-                        </Link>
-                      </Button>
-                      <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/portfolio" onClick={() => setIsOpen(false)}>
-                          Past Seasons
-                        </Link>
-                      </Button>
-                      <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/sponsors" onClick={() => setIsOpen(false)}>
-                          Sponsors
-                        </Link>
-                      </Button>
+                    <div 
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        teamOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      <div className="pl-4 flex flex-col space-y-1 pt-1">
+                        <Button variant="ghost" className="justify-start" asChild>
+                          <Link to="/team" onClick={() => setIsOpen(false)}>
+                            Our Members
+                          </Link>
+                        </Button>
+                        <Button variant="ghost" className="justify-start" asChild>
+                          <Link to="/portfolio" onClick={() => setIsOpen(false)}>
+                            Past Seasons
+                          </Link>
+                        </Button>
+                        <Button variant="ghost" className="justify-start" asChild>
+                          <Link to="/sponsors" onClick={() => setIsOpen(false)}>
+                            Sponsors
+                          </Link>
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 ) : (

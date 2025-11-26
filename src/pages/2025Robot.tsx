@@ -37,10 +37,10 @@ const Robot = () => {
         <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: Undertow</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Built for the 2024-2025 Into The Deep season, Undertow represents our team's dedication to engineering excellence and innovative design.
+            Built for the 2024-2025 INTO THE DEEP season, Undertow represents our team's dedication to engineering excellence and innovative design.
           </p>
           <Badge variant="secondary" className="mt-4 text-lg px-4 py-2">
-            2024-2025 Into The Deep Season
+            2024-2025 INTO THE DEEP Season
           </Badge>
         </div>
 
@@ -93,7 +93,7 @@ const Robot = () => {
             <CardHeader>
               <CardTitle className="text-3xl text-primary">Legacy Undertow</CardTitle>
               <CardDescription className="text-lg">
-                Previous iteration that laid the foundation for our current success
+                Previous iteration that laid the foundation for our current success. We built 2 versions of Undertow this year.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -241,12 +241,14 @@ const Robot = () => {
                     <li>• High-capacity sample and specimen handling</li>
                     <li>• Robust and reliable mechanical design</li>
                     <li>• World Championship proven performance</li>
+                    <li>• Detections and tracking capabilities for samples in the submersible</li>
+                    <li>• Emergency recovery protocols for robot malfunctions</li>
                   </ul>
                 </div>
               </div>
               <div className="mt-8 p-4 bg-accent/10 rounded-xl border border-accent/20">
                 <p className="text-sm text-muted-foreground italic">
-                  Last Updated: August 25, 2025
+                  Last Updated: October 19, 2025
                 </p>
               </div>
             </CardContent>

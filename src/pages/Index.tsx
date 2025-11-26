@@ -111,7 +111,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/50" />
             </div>
 
-            <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center pt-8 sm:pt-0">
+            <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center pt-20 sm:pt-0">
               <motion.div
                 initial="hidden"
                 whileInView="visible"

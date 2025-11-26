@@ -1,30 +1,32 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
 
 import TeamMemberCard from "@/components/TeamMemberCard";
-import hunterImage from "@/assets/TeamMembers/hunter.jpg";
-import tuckerImage from "@/assets/TeamMembers/tucker.jpg";
-import aidenImage from "@/assets/TeamMembers/aiden.jpg";
-import williamImage from "@/assets/TeamMembers/william.jpg";
-import aaronImage from "@/assets/placeholder.svg";
-import shayleeImage from "@/assets/placeholder.svg";
+import aaronImage from "@/assets/TeamMembers/aaron.png";
+import aidenImage from "@/assets/TeamMembers/aiden.png";
+import carterImage from "@/assets/TeamMembers/carter.png";
+import coralImage from "@/assets/TeamMembers/coral.png";
+import eliImage from "@/assets/TeamMembers/eli.png";
+import hunterImage from "@/assets/TeamMembers/hunter.png";
+import shayleeImage from "@/assets/TeamMembers/shaylee.png";
+import tuckerImage from "@/assets/TeamMembers/tucker.png";
+import wesleyImage from "@/assets/TeamMembers/wesley.png";
+import williamImage from "@/assets/TeamMembers/william.png";
 import Footer from "@/components/Footer";
 
 const Team = () => {
   const teamMembers = [
     {
+      name: "Tucker",
+      image: tuckerImage,
+      role: "Team Captain & Design/Builder",
+      bio: "Hi! My name is Tucker. I'm a junior in high school, and this is my second season with the team. I'm super pumped- its going to be a great season with the team. Me and my 3D printer continue to be besties. We've had our highs and lows, but true friendship is forever. I'm studying to go into electrical engineering at Western Nevada College! I'm a contrarian; But if you say so, then I don't."
+    },
+    {
       name: "Aiden",
       image: aidenImage,
       role: "Software Developer",
-      bio: "Hi! My name is Aiden and im the software lead for the VC Silver Circuits, I love programming and being able to see it put into action through robotics. This is my fourth year in FTC and my second year as Software Lead. I'm currently a Senior at Virginia City High School while getting my associates of Science from Western Nevada College. I'm very excited for this season and all the possibilities it has for me"
-    },
-    {
-      name: "Tucker",
-      image: tuckerImage,
-      role: "Designer & Builder",
-      bio: "Hi! My name is Tucker. I'm a junior in high school, and this is my second season with the team. I'm super pumped- its going to be a great season with the team. Me and my 3D printer continue to be besties. We've had our highs and lows, but true friendship is forever. I'm studying to go into electrical engineering at Western Nevada College! I'm a contrarian; But if you say so, then I don't."
+      bio: "Hi! My name is Aiden and I'm the software lead for the VC Silver Circuits, I love programming and being able to see it put into action through robotics. This is my fourth year in FTC and my second year as Software Lead. I'm currently a Senior at Virginia City High School while getting my associates of Science from Western Nevada College. I'm very excited for this season and all the possibilities it has for me"
     },
     {
       name: "Hunter",
@@ -36,19 +38,43 @@ const Team = () => {
       name: "Aaron",
       image: aaronImage,
       role: "IT & Hardware & Builder",
-      bio: "Hey there! I'm Aaron, and I'm excited to be joining VC Silver Circuits this year (2026 Season). I specialize in Information Technology, computer repairs, building, software development, and networking. I've always loved working with technology even when it's fixing a computer, writing code, or building robots and computers from the ground up. Before joining VC Silver Circuits, I was part of URSA Major, where I gained a ton of experience in robotics and teamwork. I'm looking forward to bringing my skills to the team, learning even more about robotics, and challenging new challenges alongside my teammates. I'm excited to contribute wherever I can and grow this season!"
+      bio: "Hey there! I'm Aaron, and I'm excited to be joining VC Silver Circuits this year (2025 Season DECODE). I specialize in Information Technology, computer repairs, building, software development, and networking. I've always loved working with technology even when it's fixing a computer, writing code, or building robots and computers from the ground up. Before joining VC Silver Circuits, I was part of URSA Major, where I gained a ton of experience in robotics and teamwork. I'm looking forward to bringing my skills to the team, learning even more about robotics, and challenging new challenges alongside my teammates. I'm excited to contribute wherever I can and grow this season!"
     },
     {
       name: "William",
       image: williamImage,
       role: "Builder & Designer",
-      bio: "I'm William, I joined the team in 2023. I am a Junior at TMCC high school. I learned a lot from being one of the drivers on our team last year. This year I have been learning Java and I am looking forward to learning about more CAD and programming. I have learned a lot about 3D printing, building, driving, designing, and planning.  I enjoy learning about the process of designing a working robot. I am hoping we will design a cool robot this year!."
+      bio: "Hi! I'm William, I joined the team in 2023. I am a Junior at TMCC high school. I learned a lot from being one of the drivers on our team last year. This year I have been learning Java and I am looking forward to learning about more CAD and programming. I have learned a lot about 3D printing, building, driving, designing, and planning.  I enjoy learning about the process of designing a working robot. I am hoping we will design a cool robot this year!."
     },
     {
       name: "Shaylee",
       image: shayleeImage,
       role: "Backup Driver",
-      bio: "No bio available at this time."
+      bio: "Hello! My name is Shaylee, and this is my first year on the team. I am 11 years old, and I am very excited to learn CAD and make some friends! This is my fifth year doing FIRST. When i’m older, I want to become an interior designer, but to start with jobs I would like to become a baker at bakery. I do other sports like gymnastics, and I’m also on a different robotics team in FLL, the Mindstorm Masters. I go to a small private school. I am very excited for this season!When i’m older, I want to become an interior designer, but to start with jobs I would like to become a baker at bakery. I do other sports like gymnastics, and I’m also on a different robotics team in FLL, the Mindstorm Masters."
+    },
+    {
+      name: "Carter",
+      image: carterImage,
+      role: "General Member",
+      bio: "Hello! My name is Carter, I am a sophomore at Virginia City High School. This is my first year In the first robotics program so my goal is to learn about robotics so I can one day code,design and build one of these robots as part of this group."
+    },
+    {
+      name: "Eli",
+      image: eliImage,
+      role: "CAD",
+      bio: "I am new to the team this year and am learning CAD and other things. I am in 7th grade at Virginia City Middle School. My first year is going to be great! I have learned a lot so far. I can make cool QR codes. I moved here about 2 years ago."
+    },
+    {
+      name: "Coral",
+      image: coralImage,
+      role: "Builder & CAD",
+      bio: "Hi, my name is Coral. I’m in 8th grade, and this is my first season doing anything related to robotics. I’m really excited to learn and have a great year. I’ve already made so many new friends on the team. I've enjoyed learning how to use CAD software to design parts for our robot, and I can't wait to see how our designs come to life during the build season."
+    },
+    {
+      name: "Wesley",
+      image: wesleyImage,
+      role: "CAD & Programming",
+      bio: "Hello my name is Wesley, this is my first year on the team and in the FTC program. I am excited to learn more about robotics like how to use CAD and program in Java."
     }
   ];
 
@@ -88,7 +114,7 @@ const Team = () => {
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">Team Members</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-5">
             {teamMembers.map((member, index) => (
               <TeamMemberCard
                 key={index}
@@ -119,8 +145,6 @@ const Team = () => {
             ))}
           </div>
         </section>
-
-
       </div>
       <Footer />
     </div>

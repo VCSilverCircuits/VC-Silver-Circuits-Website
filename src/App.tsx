@@ -23,10 +23,10 @@ import teamHero from "@/assets/TeamPhotos/team-hero.jpg";
 import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.jpg";
 import teamPhoto2 from "@/assets/TeamPhotos/team-photo-2.jpg";
 import worldsTeam from "@/assets/TeamPhotos/worlds-team.jpg";
-import hunter from "@/assets/TeamMembers/hunter.jpg";
-import aiden from "@/assets/TeamMembers/aiden.jpg";
-import tucker from "@/assets/TeamMembers/tucker.jpg";
-import william from "@/assets/TeamMembers/william.jpg";
+import hunter from "@/assets/TeamMembers/hunter.png";
+import aiden from "@/assets/TeamMembers/aiden.png";
+import tucker from "@/assets/TeamMembers/tucker.png";
+import william from "@/assets/TeamMembers/william.png";
 import powerPlay1 from "@/assets/RobotPhotos/power-play-1.jpg";
 import powerPlay2 from "@/assets/RobotPhotos/power-play-2.jpg";
 import itd1 from "@/assets/RobotPhotos/ITDRobot-1.jpg";
@@ -99,7 +99,7 @@ const App = () => {
               zIndex: 50,
             }}
           >
-            
+
           </div>
         </BrowserRouter>
         <SpeedInsights />
