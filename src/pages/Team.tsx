@@ -20,7 +20,7 @@ const Team = () => {
       name: "Tucker",
       image: tuckerImage,
       role: "Team Captain & Design/Builder",
-      bio: "Hi! My name is Tucker. I'm a junior in high school, and this is my second season with the team. I'm super pumped- its going to be a great season with the team. Me and my 3D printer continue to be besties. We've had our highs and lows, but true friendship is forever. I'm studying to go into electrical engineering at Western Nevada College! I'm a contrarian; But if you say so, then I don't."
+      bio: "Howdy, I'm Tucker. I've been working with this team for 2 seasons now and am glad to be a member for one final year before I graduate! When I first joined as a designer in CAD, my focus was on perfecting a mechanism on the team robot. Since then, this competition has become so much more to me--- A way to connect with people all around who share my interests and knowledge, and who have a desire to create something incredible! As recently-nominated team captain, I'm learning how to lead, to work with all kinds of people, and how to help others gain the experiences I've come to treasure."
     },
     {
       name: "Aiden",
