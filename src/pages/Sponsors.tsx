@@ -10,11 +10,15 @@ import sponsor5 from "@/assets/Sponsors/5.webp"; // Kimmie Candy
 import sponsor6 from "@/assets/Sponsors/6.webp"; // Tesla
 import sponsor7 from "@/assets/Sponsors/7.webp"; // Comstock
 import sponsor8 from "@/assets/Sponsors/8.webp"; // Dolan Auto
+import sponsor9 from "@/assets/Sponsors/9.webp"; // IBEW
+import sponsor10 from "@/assets/Sponsors/10.webp"; // 
 
 const sponsorsByCategory = {
   major: [
     { logo: sponsor1, website: "https://www.tract.com/", name: "Tract" },
+    { logo: sponsor9, website: "https://www.ibew.org/", name: "IBEW" },
     { logo: sponsor2, website: "https://ghaasfoundation.org/content/ghf/en/home.html", name: "Gene Haas" },
+    { logo: sponsor10, website: "https://www.sendcutsend.com/", name: "SendCutSend" },
     { logo: sponsor3, website: "https://www.revrobotics.com/", name: "REV Robotics" },
   ],
   current: [
