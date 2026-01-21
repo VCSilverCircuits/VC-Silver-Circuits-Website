@@ -2,16 +2,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import TeamMemberCard from "@/components/TeamMemberCard";
-import aaronImage from "@/assets/TeamMembers/aaron.png";
-import aidenImage from "@/assets/TeamMembers/aiden.png";
-import carterImage from "@/assets/TeamMembers/carter.png";
-import coralImage from "@/assets/TeamMembers/coral.png";
-import eliImage from "@/assets/TeamMembers/eli.png";
-import hunterImage from "@/assets/TeamMembers/hunter.png";
-import shayleeImage from "@/assets/TeamMembers/shaylee.png";
-import tuckerImage from "@/assets/TeamMembers/tucker.png";
-import wesleyImage from "@/assets/TeamMembers/wesley.png";
-import williamImage from "@/assets/TeamMembers/william.png";
+import aaronImage from "@/assets/TeamMembers/aaron.webp";
+import aidenImage from "@/assets/TeamMembers/aiden.webp";
+import carterImage from "@/assets/TeamMembers/carter.webp";
+import eliImage from "@/assets/TeamMembers/eli.webp";
+import hunterImage from "@/assets/TeamMembers/hunter.webp";
+import shayleeImage from "@/assets/TeamMembers/shaylee.webp";
+import tuckerImage from "@/assets/TeamMembers/tucker.webp";
+import wesleyImage from "@/assets/TeamMembers/wesley.webp";
+import williamImage from "@/assets/TeamMembers/william.webp";
+import jackImage from "@/assets/TeamMembers/jack.webp";
 import Footer from "@/components/Footer";
 
 const Team = () => {
@@ -65,16 +65,16 @@ const Team = () => {
       bio: "I am new to the team this year and am learning CAD and other things. I am in 7th grade at Virginia City Middle School. My first year is going to be great! I have learned a lot so far. I can make cool QR codes. I moved here about 2 years ago."
     },
     {
-      name: "Coral",
-      image: coralImage,
-      role: "Builder & CAD",
-      bio: "Hi, my name is Coral. I’m in 8th grade, and this is my first season doing anything related to robotics. I’m really excited to learn and have a great year. I’ve already made so many new friends on the team. I've enjoyed learning how to use CAD software to design parts for our robot, and I can't wait to see how our designs come to life during the build season."
-    },
-    {
       name: "Wesley",
       image: wesleyImage,
       role: "CAD & Programming",
       bio: "Hello my name is Wesley, this is my first year on the team and in the FTC program. I am excited to learn more about robotics like how to use CAD and program in Java."
+    },
+      {
+      name: "Jack",
+      image: jackImage,
+      role: "CAD & Programming",
+      bio: "Hi, I’m Jack, i joined the team last August. I have learned a lot from other team members that help out teaching me CAD. I’m looking forward to helping out as much as I can on this robot and design as much parts as needed. I’ve learned how to CAD alright and volunteer quite a bit. I hope this seasons robot works well and the team works together to do great."
     }
   ];
 
