@@ -74,7 +74,7 @@ const Team = () => {
       name: "Jack",
       image: jackImage,
       role: "CAD & Programming",
-      bio: "Hi, I’m Jack, i joined the team last August. I have learned a lot from other team members that help out teaching me CAD. I’m looking forward to helping out as much as I can on this robot and design as much parts as needed. I’ve learned how to CAD alright and volunteer quite a bit. I hope this seasons robot works well and the team works together to do great."
+      bio: "Hi, I’m Jack, I joined the team last August 2025. I have learned a lot from other team members that help out teaching me CAD. I’m looking forward to helping out as much as I can on this years robot and design as much parts as needed. I’ve learned how to CAD and volunteer quite a bit so far. I also hope this seasons robot works well and the team works together to do great."
     }
   ];
 
