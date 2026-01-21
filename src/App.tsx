@@ -32,7 +32,7 @@ import powerPlay2 from "@/assets/RobotPhotos/power-play-2.webp";
 import itd1 from "@/assets/RobotPhotos/ITDRobot-1.webp";
 import itd2 from "@/assets/RobotPhotos/ITDRobot-2.webp";
 import cs1 from "@/assets/RobotPhotos/centerstage-robot-1.webp";
-import cs2 from "@/assets/RobotPhotos/centerstage-robot-2.png";
+import cs2 from "@/assets/RobotPhotos/centerstage-robot-2.webp";
 
 const preloadImages = (images: string[]) => {
   images.forEach((src) => {
