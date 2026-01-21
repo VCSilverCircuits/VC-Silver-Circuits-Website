@@ -50,7 +50,7 @@ const Team = () => {
       name: "Shaylee",
       image: shayleeImage,
       role: "Backup Driver",
-      bio: "Hello! My name is Shaylee, and this is my first year on the team. I am 11 years old, and I am very excited to learn CAD and make some friends! This is my fifth year doing FIRST. When i’m older, I want to become an interior designer, but to start with jobs I would like to become a baker at bakery. I do other sports like gymnastics, and I’m also on a different robotics team in FLL, the Mindstorm Masters. I go to a small private school. I am very excited for this season!When i’m older, I want to become an interior designer, but to start with jobs I would like to become a baker at bakery. I do other sports like gymnastics, and I’m also on a different robotics team in FLL, the Mindstorm Masters."
+      bio: "Hello! My name is Shaylee, and this is my first year on the team. I am 11 years old, and I am very excited to learn CAD and make some friends! This is my fifth year doing FIRST. When i’m older, I want to become an interior designer, but to start with jobs I would like to become a baker at bakery. I do other sports like gymnastics, and I’m also on a different robotics team in FLL, the Mindstorm Masters. I go to a small private school. I am very excited for this season!"
     },
     {
       name: "Carter",
