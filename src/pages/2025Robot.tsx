@@ -3,10 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play } from "lucide-react";
 import Footer from "@/components/Footer";
-import robot1Image from "@/assets/RobotPhotos/ITDRobot-1.jpg";
-import robot2Image from "@/assets/RobotPhotos/ITDRobot-2.jpg";
-import robotV11Image from "@/assets/RobotPhotos/ITDRobot-V1-1.jpg";
-import robotV12Image from "@/assets/RobotPhotos/ITDRobot-V1-2.jpg";
+import robot1Image from "@/assets/RobotPhotos/ITDRobot-1.webp";
+import robot2Image from "@/assets/RobotPhotos/ITDRobot-2.webp";
+import robotV11Image from "@/assets/RobotPhotos/ITDRobot-V1-1.webp";
+import robotV12Image from "@/assets/RobotPhotos/ITDRobot-V1-2.webp";
 const Robot = () => {
   const stats = [
     { label: "Overall OPR", value: "172.10", description: "" },

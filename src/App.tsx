@@ -19,19 +19,19 @@ import ScrollToTop from "@/components/GoToTop";
 import TeamPortfolio from "./pages/Portfolio";
 import Sponsors from "./pages/Sponsors";
 
-import teamHero from "@/assets/TeamPhotos/team-hero.jpg";
-import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.jpg";
-import teamPhoto2 from "@/assets/TeamPhotos/team-photo-2.jpg";
-import worldsTeam from "@/assets/TeamPhotos/worlds-team.jpg";
+import teamHero from "@/assets/TeamPhotos/team-hero.webp";
+import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.webp";
+import teamPhoto2 from "@/assets/TeamPhotos/team-photo-2.webp";
+import worldsTeam from "@/assets/TeamPhotos/worlds-team.webp";
 import hunter from "@/assets/TeamMembers/hunter.webp";
 import aiden from "@/assets/TeamMembers/aiden.webp";
 import tucker from "@/assets/TeamMembers/tucker.webp";
 import william from "@/assets/TeamMembers/william.webp";
-import powerPlay1 from "@/assets/RobotPhotos/power-play-1.jpg";
-import powerPlay2 from "@/assets/RobotPhotos/power-play-2.jpg";
-import itd1 from "@/assets/RobotPhotos/ITDRobot-1.jpg";
-import itd2 from "@/assets/RobotPhotos/ITDRobot-2.jpg";
-import cs1 from "@/assets/RobotPhotos/centerstage-robot-1.jpg";
+import powerPlay1 from "@/assets/RobotPhotos/power-play-1.webp";
+import powerPlay2 from "@/assets/RobotPhotos/power-play-2.webp";
+import itd1 from "@/assets/RobotPhotos/ITDRobot-1.webp";
+import itd2 from "@/assets/RobotPhotos/ITDRobot-2.webp";
+import cs1 from "@/assets/RobotPhotos/centerstage-robot-1.webp";
 import cs2 from "@/assets/RobotPhotos/centerstage-robot-2.png";
 
 const preloadImages = (images: string[]) => {

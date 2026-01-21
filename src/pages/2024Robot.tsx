@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play } from "lucide-react";
 import Footer from "@/components/Footer";
-import robot1Image from "@/assets/RobotPhotos/centerstage-robot-1.jpg";
+import robot1Image from "@/assets/RobotPhotos/centerstage-robot-1.webp";
 import robot2Image from "@/assets/RobotPhotos/centerstage-robot-2.png";
 
 const Robot = () => {

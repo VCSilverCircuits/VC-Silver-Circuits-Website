@@ -5,7 +5,7 @@ import { ExternalLink, Play, Youtube, Facebook, Instagram, Download } from "luci
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import Footer from "@/components/Footer";
 import cheatSheetPdf from "@/assets/Documents/Decode/CheatSheet.pdf";
-import cheatSheetPng from "@/assets/Documents/Decode/CheatSheet.png";
+import cheatSheetPng from "@/assets/Documents/Decode/CheatSheet.webp";
 
 const mediaItems = [
     { mission: 1, videoId: "yN3WkYg_WkE" },

@@ -8,9 +8,9 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Trophy, Users, Zap, ExternalLink, Heart } from "lucide-react";
 import Footer from "@/components/Footer";
-import teamHeroImage from "@/assets/TeamPhotos/team-hero.jpg";
-import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.jpg";
-import teamPhoto2 from "@/assets/TeamPhotos/team-photo-2.jpg";
+import teamHeroImage from "@/assets/TeamPhotos/team-hero.webp";
+import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.webp";
+import teamPhoto2 from "@/assets/TeamPhotos/team-photo-2.webp";
 
 const Index = () => {
   const [showIntro, setShowIntro] = useState(false);
@@ -164,10 +164,10 @@ const Index = () => {
                 viewport={{ once: true }}
               >
                 We are the VC Silver Circuits, a team participating in the FIRST
-                Tech Challenge program. Our team consists of eleven team members,
-                two coaches, and one mentor, dedicated to pursuing knowledge in
+                Tech Challenge program. Our team consists of ten team members,
+                two coaches, and two mentors, dedicated to pursuing knowledge in
                 robotics and engineering. We come from a small town in rural
-                Nevada called Virginia City in Storey County, Nevada, but our passion is big.
+                Nevada called Virginia City in Storey County, Nevada, but our passion for robotics is big.
               </motion.p>
 
               <motion.div

@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Trophy, Users } from "lucide-react";
 import Footer from "@/components/Footer";
-import worldsTeamImage from "@/assets/TeamPhotos/worlds-team.jpg";
+import worldsTeamImage from "@/assets/TeamPhotos/worlds-team.webp";
 
 const Events = () => {
   const [latestEvent, setLatestEvent] = useState<any>(null);

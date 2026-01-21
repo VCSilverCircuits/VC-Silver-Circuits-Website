@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play } from "lucide-react";
 import Footer from "@/components/Footer";
-import powerPlayImage1 from "@/assets/RobotPhotos/power-play-1.jpg";
-import powerPlayImage2 from "@/assets/RobotPhotos/power-play-2.jpg";
+import powerPlayImage1 from "@/assets/RobotPhotos/power-play-1.webp";
+import powerPlayImage2 from "@/assets/RobotPhotos/power-play-2.webp";
 
 const PowerPlayRobot = () => {
   const stats = [
