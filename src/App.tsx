@@ -18,7 +18,7 @@ import NotFound from "./pages/NotFound";
 import ScrollToTop from "@/components/GoToTop";
 import TeamPortfolio from "./pages/Portfolio";
 import Sponsors from "./pages/Sponsors";
-
+import DecodeRobot from "./pages/2026Robot";
 import teamHero from "@/assets/TeamPhotos/team-hero.webp";
 import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.webp";
 import teamPhoto2 from "@/assets/TeamPhotos/team-photo-2.webp";
@@ -33,6 +33,7 @@ import itd1 from "@/assets/RobotPhotos/ITDRobot-1.webp";
 import itd2 from "@/assets/RobotPhotos/ITDRobot-2.webp";
 import cs1 from "@/assets/RobotPhotos/centerstage-robot-1.webp";
 import cs2 from "@/assets/RobotPhotos/centerstage-robot-2.webp";
+import { Bot } from "lucide-react";
 
 const preloadImages = (images: string[]) => {
   images.forEach((src) => {
@@ -81,7 +82,9 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/team" element={<Team />} />
             <Route path="/vcscteam" element={<Team />} />
-            <Route path="/into-the-deep-robot" element={<ITDRobot />} />
+            <Route path="/decode-robot" element={<DecodeRobot />} />
+            <Route path="/into-the-deep-robot" element={<DecodeRobot />} />
+            <Route path="/into-the-deep" element={<ITDRobot />} />
             <Route path="/center-stage-robot" element={<CSRobot />} />
             <Route path="/power-play-robot" element={<PPlayRobot />} />
             <Route path="/media" element={<Media />} />

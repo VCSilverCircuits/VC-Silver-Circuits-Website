@@ -18,7 +18,7 @@ const Navigation = () => {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/team", label: "Team" },
-    { href: "/into-the-deep-robot", label: "Robots" },
+    { href: "/into-the-deep", label: "Robots" },
     { href: "/media", label: "Media" },
     { href: "/events", label: "Events" },
     { href: "/contact", label: "Contact/Donate" },
@@ -31,9 +31,9 @@ const Navigation = () => {
       return location.pathname.startsWith("/team") || location.pathname.startsWith("/portfolio");
     }
 
-    if (path === "/into-the-deep-robot") {
+    if (path === "/into-the-deep") {
       return (
-        location.pathname.startsWith("/into-the-deep-robot") ||
+        location.pathname.startsWith("/into-the-deep") ||
         location.pathname.startsWith("/center-stage-robot") ||
         location.pathname.startsWith("/power-play-robot")
       );
@@ -62,7 +62,10 @@ const Navigation = () => {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="start">
                     <DropdownMenuItem asChild>
-                      <Link to="/into-the-deep-robot">2024-2025 Into The Deep</Link>
+                      <Link to="/decode-robot">2025-2026 Decode</Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link to="/into-the-deep">2024-2025 Into The Deep</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link to="/center-stage-robot">2023-2024 Center Stage</Link>
@@ -129,7 +132,12 @@ const Navigation = () => {
                     >
                       <div className="pl-4 flex flex-col space-y-1 pt-1">
                         <Button variant="ghost" className="justify-start" asChild>
-                          <Link to="/into-the-deep-robot" onClick={() => setIsOpen(false)}>
+                          <Link to="/decode-robot" onClick={() => setIsOpen(false)}>
+                            2025-2026 DECODE
+                          </Link>
+                        </Button>
+                        <Button variant="ghost" className="justify-start" asChild>
+                          <Link to="/into-the-deep" onClick={() => setIsOpen(false)}>
                             2024-2025 Into The Deep
                           </Link>
                         </Button>
