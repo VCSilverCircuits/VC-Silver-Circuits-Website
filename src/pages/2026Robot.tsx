@@ -205,7 +205,7 @@ const Robot = () => {
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-accent">Autonomous Performance</h3>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>• Advanced 12 Artafact autonomous routine</li>
+                    <li>• Advanced 12 Artifact autonomous routine</li>
                     <li>• Alliance partner compatible autonomous execution</li>
                     <li>• Smart Turret tracking implementation for consistent performance</li>
                   </ul>
