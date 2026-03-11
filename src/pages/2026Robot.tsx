@@ -5,8 +5,7 @@ import { ExternalLink, Play } from "lucide-react";
 import Footer from "@/components/Footer";
 import robot1Image from "@/assets/RobotPhotos/DecodeRobot2.webp";
 import robot2Image from "@/assets/RobotPhotos/DecodeRobot3.webp";
-import robotV11Image from "@/assets/RobotPhotos/ITDRobot-V1-1.webp";
-import robotV12Image from "@/assets/RobotPhotos/ITDRobot-V1-2.webp";
+
 const Robot = () => {
   const stats = [
     { label: "Overall OPR", value: "101.99", description: "" },
@@ -215,7 +214,7 @@ const Robot = () => {
                   <h3 className="text-lg font-semibold text-accent">Competition Features</h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li>• Robot tilt feature for reliable parking</li>
-                    <li>• High-capacity Artafact Storage</li>
+                    <li>• High-capacity Artifact Storage</li>
                     <li>• Robust and reliable mechanical design</li>
                     <li>• League Tournament proven performance</li>
                     <li>• April Tag Tracking for consistent aiming</li>
