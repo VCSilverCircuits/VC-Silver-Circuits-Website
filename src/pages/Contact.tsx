@@ -43,7 +43,7 @@ const Contact = () => {
 
   const supportLinks = [
     { name: "Venmo", url: "https://venmo.com/u/SilverCircuits16158", description: "Support us via Venmo", color: "text-blue-400" },
-    { name: "GoFundMe", url: "https://gofund.me/e094b3bd", description: "Contribute to our team goals", color: "text-green-400" },
+    { name: "GoFundMe", url: "https://www.gofundme.com/f/support-vc-silver-circuits-get-to-the-michiana-premier?attribution_id=sl:11f04d9a-8249-4815-9081-9b559382c6bc&lang=en_US&ts=1773361208&utm_campaign=fp_sharesheet&utm_content=amp17_ta-amp20_control&utm_medium=customer&utm_source=copy_link", description: "Contribute to our team goals", color: "text-green-400" },
     { name: "PayPal", url: "https://www.paypal.com/US/fundraiser/charity/4735879", description: "Donate via PayPal", color: "text-blue-500" }
   ];
 
