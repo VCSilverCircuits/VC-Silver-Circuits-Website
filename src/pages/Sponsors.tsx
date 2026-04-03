@@ -11,15 +11,20 @@ import sponsor6 from "@/assets/Sponsors/6.webp"; // Tesla
 import sponsor7 from "@/assets/Sponsors/7.webp"; // Comstock
 import sponsor8 from "@/assets/Sponsors/8.webp"; // Dolan Auto
 import sponsor9 from "@/assets/Sponsors/9.webp"; // IBEW
-import sponsor10 from "@/assets/Sponsors/10.webp"; // 
+import sponsor10 from "@/assets/Sponsors/10.webp"; //
+import sponsor11 from "@/assets/Sponsors/11.webp"; // Briggs Electric
+import sponsor12 from "@/assets/Sponsors/12.webp"; // The Newtron Group
 
 const sponsorsByCategory = {
   major: [
     { logo: sponsor1, website: "https://www.tract.com/", name: "Tract" },
     { logo: sponsor9, website: "https://www.ibew.org/", name: "IBEW" },
+    { logo: sponsor12, website: "https://www.thenewtrongroup.com/", name: "The Newtron Group" },
     { logo: sponsor2, website: "https://ghaasfoundation.org/content/ghf/en/home.html", name: "Gene Haas" },
     { logo: sponsor10, website: "https://www.sendcutsend.com/", name: "SendCutSend" },
+    { logo: sponsor11, website: "https://www.yelp.com/biz/briggs-electric-carson-city-2", name: "Briggs Electric" },
     { logo: sponsor3, website: "https://www.revrobotics.com/", name: "REV Robotics" },
+
   ],
   current: [
     { logo: sponsor5, website: "https://kimmiecandy.com/", name: "Kimmie Candy" },
@@ -38,7 +43,7 @@ const SponsorCard: FC<{ sponsor: { logo: string; website: string; name: string }
     href={sponsor.website}
     target="_blank"
     rel="noopener noreferrer"
-    className="flex items-center justify-center p-4 rounded-xl bg-white hover:scale-105 transition-transform duration-300 shadow-md tech-fade-in"
+    className="flex items-center justify-center p-4 rounded-xl bg-white border border-border hover:border-primary/50 hover:shadow-tech hover:scale-105 transition-all duration-300"
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: index * 0.15, duration: 0.6 }}
@@ -51,7 +56,7 @@ const SponsorCard: FC<{ sponsor: { logo: string; website: string; name: string }
 
 const SponsorSection: FC<{ title: string; sponsors: typeof sponsorsByCategory[keyof typeof sponsorsByCategory] | typeof supporters; size: string }> = ({ title, sponsors, size }) => (
   <section className="flex flex-col items-center mb-12 w-full">
-    <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-center">{title}</h2>
+    <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-center text-primary">{title}</h2>
     <motion.div className="flex flex-wrap justify-center gap-8">
       {sponsors.map((sponsor, index) => (
         <SponsorCard key={index} sponsor={sponsor} size={size} index={index} />
@@ -60,19 +65,26 @@ const SponsorSection: FC<{ title: string; sponsors: typeof sponsorsByCategory[ke
   </section>
 );
 const ThankYouSponsors: FC = () => (
-  <div className="min-h-screen flex flex-col bg-black text-white">
-    <div className="container mx-auto px-4 pt-32 pb-12 flex flex-col items-center">
-      <h1 className="text-4xl sm:text-5xl font-bold text-center mb-8">Thank You to Our Sponsors and Donors!</h1>
-      <p className="text-center text-gray-300 mb-6 max-w-3xl font-bold">
-        Our team wouldn’t be possible without the generous support of our sponsors. We sincerely appreciate your contribution to our success!
-      </p>
+  <div className="min-h-screen flex flex-col tech-fade-in">
+    <div className="container mx-auto px-4 pt-20 pb-12 flex flex-col items-center">
+      <div className="text-center mb-12 circuit-bg p-12 rounded-2xl w-full">
+        <h1 className="text-4xl sm:text-5xl font-bold gradient-text mb-4">Thank You to Our Sponsors and Donors!</h1>
+        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          Our team wouldn’t be possible without the generous support of our sponsors. We sincerely appreciate your contribution to our success!
+        </p>
+        <p className="text-muted-foreground mt-4 max-w-3xl mx-auto italic">
+          A heartfelt thank you to all of our donors—big and small—your support makes everything we do possible.
+        </p>
+      </div>
 
-      {/* Heartfelt Note */}
-      <p className="text-center text-gray-400 mb-12 max-w-3xl italic font-bold">
-        A heartfelt thank you to all of our donors—big and small—your support makes everything we do possible.
-      </p>
-
-      <SponsorSection title="Major Sponsors" sponsors={sponsorsByCategory.major} size="w-44 h-44" />
+      <section className="flex flex-col items-center mb-12 w-full max-w-4xl">
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-center text-primary">Major Sponsors</h2>
+        <motion.div className="flex flex-wrap justify-center gap-6 w-full">
+          {sponsorsByCategory.major.map((sponsor, index) => (
+            <SponsorCard key={index} sponsor={sponsor} size="w-40 h-40" index={index} />
+          ))}
+        </motion.div>
+      </section>
 
       <SponsorSection title="Supported By" sponsors={supporters} size="w-44 h-44" />
 

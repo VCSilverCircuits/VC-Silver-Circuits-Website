@@ -115,19 +115,22 @@ const TeamPortfolio: FC = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <div className="min-h-screen flex flex-col bg-black text-white">
+        <div className="min-h-screen flex flex-col tech-fade-in">
             <div className="container mx-auto px-4 pt-20 pb-12 flex-1">
-                <h1 className="text-4xl font-bold text-center mb-16 mt-10">Team History</h1>
+                <div className="text-center mb-16 mt-10 circuit-bg p-12 rounded-2xl">
+                    <h1 className="text-5xl font-bold gradient-text">Team History</h1>
+                    <p className="text-xl text-muted-foreground mt-4">Our journey through the seasons</p>
+                </div>
 
                 {seasons.map((season, index) => (
                     <motion.section
                         key={index}
-                        className="mb-16 bg-gray-900 p-6 rounded-xl shadow-md shadow-gray-800/50 border border-gray-700"
+                        className="mb-16 bg-gradient-tech p-6 rounded-xl border border-border hover:border-primary/50 hover:shadow-tech transition-all duration-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.2, duration: 0.6 }}
                     >
-                        <h2 className="text-2xl font-semibold mb-6 text-white">{season.title}</h2>
+                        <h2 className="text-2xl font-semibold mb-6 text-primary">{season.title}</h2>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                             {season.images.map((img, idx) => (
@@ -141,9 +144,9 @@ const TeamPortfolio: FC = () => {
                         </div>
 
                         {season.quickStats && (
-                            <div className="mb-6 p-4 rounded-lg border border-gray-700 bg-gradient-to-r from-gray-800 to-gray-900 shadow-inner">
-                                <h3 className="text-xl font-semibold mb-4 text-center">Quick Stats</h3>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-gray-200">
+                            <div className="mb-6 p-4 rounded-lg border border-border bg-card/50 shadow-inner">
+                                <h3 className="text-xl font-semibold mb-4 text-center text-primary">Quick Stats</h3>
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-foreground">
                                     {[
                                         { label: "Total", key: "totalNP" },
                                         { label: "Auto", key: "auto" },
@@ -155,11 +158,11 @@ const TeamPortfolio: FC = () => {
                                         return (
                                             <div
                                                 key={idx}
-                                                className="bg-gray-700 rounded-lg p-3 flex flex-col items-center justify-center hover:bg-gray-600 transition-colors duration-200"
+                                                className="bg-card rounded-lg p-3 flex flex-col items-center justify-center border border-border hover:border-primary/50 transition-all duration-200"
                                             >
                                                 <p className="font-medium mb-1 text-center">{label}</p>
                                                 <p className="text-lg font-bold mb-1 text-center">{value}</p>
-                                                {rank && <p className="text-sm text-gray-300 text-center">{rank}</p>}
+                                                {rank && <p className="text-sm text-muted-foreground text-center">{rank}</p>}
                                             </div>
                                         );
                                     })}
@@ -173,7 +176,7 @@ const TeamPortfolio: FC = () => {
                                 onClick={() =>
                                     setOpenIndex(openIndex === index ? null : index)
                                 }
-                                className="w-full text-left font-medium text-lg mb-2 py-2 px-4 bg-gray-800 text-white rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors duration-200"
+                                className="w-full text-left font-medium text-lg mb-2 py-2 px-4 bg-card text-foreground rounded-lg border border-border hover:border-primary/50 hover:shadow-tech transition-all duration-200"
                             >
                                 {openIndex === index ? "Hide Achievements" : "View Achievements"}
                             </button>
@@ -186,7 +189,7 @@ const TeamPortfolio: FC = () => {
                                         animate={{ opacity: 1, height: "auto" }}
                                         exit={{ opacity: 0, height: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className="list-disc pl-6 space-y-2 mt-4 text-gray-300 overflow-hidden"
+                                        className="list-disc pl-6 space-y-2 mt-4 text-muted-foreground overflow-hidden"
                                     >
                                         {season.achievements.map((achievement, idx) => (
                                             <li key={idx}>{achievement}</li>
