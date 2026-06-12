@@ -43,10 +43,13 @@ const Robot = () => {
 
   const stats = [
     ...oprStats,
-    { label: "High Score", value: "190", description: "League Tournament" },
-    { label: "Close Auto", value: "12+0", description: "Close Auto Performance" },
-    { label: "Far Auto", value: "N/A", description: "Far Auto Performance" },
-    { label: "Avg ", value: "N/A", description: "During Tele-OP Practice" },
+    { label: "High Score", value: "191", description: "No penalties at NV State Championship" },
+    { label: "Close Auto", value: "15*", description: "Artifacts scored in the goal (*attempted)" },
+    { label: "Far Auto", value: "18*", description: "Artifacts scored in the goal (*attempted)" },
+    { label: "Tele-OP Scoring", value: "37", description: "Average scored in the goal" },
+    { label: "End Game", value: "Park with Tilt", description: "" },
+    { label: "Avg Solo Score", value: "185", description: "" },
+    { label: "Solo High Score", value: "200", description: "" },
   ];
 
   return (
