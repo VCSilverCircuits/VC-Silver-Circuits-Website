@@ -1,4 +1,3 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play } from "lucide-react";
@@ -31,10 +30,17 @@ const Robot = () => {
     { label: "Hang Level", value: "2", description: "Fast Level 2 Hang" },
   ];
 
+  const videos = [
+    { title: "5+0 Specimen Auto", url: "https://www.youtube.com/watch?v=Ug-gPDnumV8" },
+    { title: "0+6 Sample Auto", url: "https://www.youtube.com/watch?v=lNuZh8ZRyjM" },
+    { title: "Nevada State Record with Legacy Undertow", url: "https://www.youtube.com/watch?v=Ug-gPDnumV8" },
+    { title: "Undertow V2 High Score", url: "https://www.youtube.com/watch?v=Mhzd73riopc" },
+  ];
+
   return (
     <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
+        <div className="text-center py-16 mb-16 circuit-bg">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: Undertow</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Built for the 2024-2025 INTO THE DEEP season, Undertow represents our team's dedication to engineering excellence and innovative design.
@@ -46,14 +52,14 @@ const Robot = () => {
 
         <section className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
+            <div className="group overflow-hidden">
               <img
                 src={robot1Image}
                 alt="Undertow Robot V2"
                 className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
+            <div className="group overflow-hidden">
               <img
                 src={robot2Image}
                 alt="Undertow Robot Competition"
@@ -63,196 +69,131 @@ const Robot = () => {
           </div>
         </section>
 
-        <section className="mb-16">
-          <Card className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
-            <CardHeader>
-              <CardTitle className="text-3xl text-primary">Undertow V2</CardTitle>
-              <CardDescription className="text-lg">
-                Latest iteration with enhanced capabilities and record-breaking performance
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {stats.map((stat, index) => (
-                  <div
-                    key={index}
-                    className="bg-card/50 rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-300"
-                  >
-                    <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
-                    <div className="text-sm font-medium text-foreground mb-1">{stat.label}</div>
-                    <div className="text-xs text-muted-foreground">{stat.description}</div>
-                  </div>
-                ))}
+        <section className="mb-16 border-t border-border pt-12">
+          <h2 className="text-3xl font-bold text-primary mb-2">Undertow V2</h2>
+          <p className="text-lg text-muted-foreground mb-10">
+            Latest iteration with enhanced capabilities and record-breaking performance
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="text-sm font-medium text-foreground mb-1">{stat.label}</div>
+                <div className="text-xs text-muted-foreground">{stat.description}</div>
               </div>
-            </CardContent>
-          </Card>
+            ))}
+          </div>
         </section>
 
-        <section className="mb-16">
-          <Card className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
-            <CardHeader>
-              <CardTitle className="text-3xl text-primary">Legacy Undertow</CardTitle>
-              <CardDescription className="text-lg">
-                Previous iteration that laid the foundation for our current success. We built 2 versions of Undertow this year.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
-                  <img
-                    src={robotV11Image}
-                    alt="Undertow V1 Robot Prototype"
-                    className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
-                  <img
-                    src={robotV12Image}
-                    alt="Undertow V1 Competition Match"
-                    className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
+        <section className="mb-16 border-t border-border pt-12">
+          <h2 className="text-3xl font-bold text-primary mb-2">Legacy Undertow</h2>
+          <p className="text-lg text-muted-foreground mb-10">
+            Previous iteration that laid the foundation for our current success. We built 2 versions of Undertow this year.
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="group overflow-hidden">
+              <img
+                src={robotV11Image}
+                alt="Undertow V1 Robot Prototype"
+                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="group overflow-hidden">
+              <img
+                src={robotV12Image}
+                alt="Undertow V1 Competition Match"
+                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
+            {previousStats.map((stat, index) => (
+              <div key={index}>
+                <div className="text-2xl font-bold text-accent mb-2">{stat.value}</div>
+                <div className="text-sm font-medium text-foreground mb-1">{stat.label}</div>
+                <div className="text-xs text-muted-foreground">{stat.description}</div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {previousStats.map((stat, index) => (
-                  <div
-                    key={index}
-                    className="bg-card/50 rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-300"
-                  >
-                    <div className="text-2xl font-bold text-accent mb-2">{stat.value}</div>
-                    <div className="text-sm font-medium text-foreground mb-1">{stat.label}</div>
-                    <div className="text-xs text-muted-foreground">{stat.description}</div>
-                  </div>
-                ))}
-              </div>
+            ))}
+          </div>
 
-              <p className="mt-6 text-muted-foreground text-sm leading-relaxed">
-                Undertow V1 was our first Into The Deep competition robot. It established our
-                reliable drive base, intake, and specimen systems, which set a <span className="font-semibold">Nevada State High Score Record</span>.
-                Many of the lessons learned from V1's autonomous paths and endgame hang system
-                directly influenced the enhancements in Undertow V2.
-              </p>
-            </CardContent>
-          </Card>
+          <p className="mt-10 text-muted-foreground text-sm leading-relaxed">
+            Undertow V1 was our first Into The Deep competition robot. It established our
+            reliable drive base, intake, and specimen systems, which set a <span className="font-semibold">Nevada State High Score Record</span>.
+            Many of the lessons learned from V1's autonomous paths and endgame hang system
+            directly influenced the enhancements in Undertow V2.
+          </p>
         </section>
 
-        <section className="mb-16">
-          <Card className="bg-gradient-tech border-border">
-            <CardHeader>
-              <CardTitle className="text-2xl text-primary flex items-center gap-2">
-                <Play className="h-6 w-6" />
-                Robots in Action
-              </CardTitle>
-              <CardDescription>
-                Watch our autonomous routine and competition performances
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
-                  <div>
-                    <h3 className="font-semibold text-foreground">5+0 Specimen Auto</h3>
-                  </div>
-                  <Button variant="hero" asChild>
-                    <a href="https://www.youtube.com/watch?v=Ug-gPDnumV8" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      Watch on YouTube
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
-                  <div>
-                    <h3 className="font-semibold text-foreground">0+6 Sample Auto</h3>
-                  </div>
-                  <Button variant="hero" asChild>
-                    <a href="https://www.youtube.com/watch?v=lNuZh8ZRyjM" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      Watch on YouTube
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
-                  <div>
-                    <h3 className="font-semibold text-foreground">Nevada State Record with Legacy Undertow</h3>
-                  </div>
-                  <Button variant="hero" asChild>
-                    <a href="https://www.youtube.com/watch?v=Ug-gPDnumV8" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      Watch on YouTube
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
-                  <div>
-                    <h3 className="font-semibold text-foreground">Undertow V2 High Score</h3>
-                  </div>
-                  <Button variant="hero" asChild>
-                    <a href="https://www.youtube.com/watch?v=Mhzd73riopc" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      Watch on YouTube
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
-                  <div>
-                    <h3 className="font-semibold text-foreground">Team YouTube Channel</h3>
-                    <p className="text-sm text-muted-foreground">More videos and robot demonstrations</p>
-                  </div>
-                  <Button variant="outline" asChild>
-                    <a
-                      href="https://www.youtube.com/channel/UCDCrf8ckC8DoCEa3QeOZgQw"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      Subscribe
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
+        <section className="mb-16 border-t border-border pt-12">
+          <h2 className="text-2xl font-bold text-primary flex items-center gap-2 mb-2">
+            <Play className="h-6 w-6" />
+            Robots in Action
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Watch our autonomous routine and competition performances
+          </p>
+          <div className="divide-y divide-border">
+            {videos.map((video, index) => (
+              <div key={index} className="flex items-center justify-between py-4">
+                <h3 className="font-semibold text-foreground">{video.title}</h3>
+                <Button variant="hero" asChild>
+                  <a href={video.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    Watch on YouTube
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Button>
               </div>
-            </CardContent>
-          </Card>
+            ))}
+            <div className="flex items-center justify-between py-4">
+              <div>
+                <h3 className="font-semibold text-foreground">Team YouTube Channel</h3>
+                <p className="text-sm text-muted-foreground">More videos and robot demonstrations</p>
+              </div>
+              <Button variant="outline" asChild>
+                <a
+                  href="https://www.youtube.com/channel/UCDCrf8ckC8DoCEa3QeOZgQw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  Subscribe
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+          </div>
         </section>
 
-        <section>
-          <Card className="bg-gradient-tech border-border">
-            <CardHeader>
-              <CardTitle className="text-2xl text-primary">Technical Achievements</CardTitle>
-              <CardDescription>
-                Key milestones and capabilities of our robot design
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-accent">Autonomous Performance</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Advanced 6+0 sample autonomous routine</li>
-                    <li>• Precision 0+5 specimen autonomous sequence</li>
-                    <li>• Consistent and reliable autonomous execution</li>
-                    <li>• Strategic scoring optimization</li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-accent">Competition Features</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Level 3 hang capability for maximum points</li>
-                    <li>• High-capacity sample and specimen handling</li>
-                    <li>• Robust and reliable mechanical design</li>
-                    <li>• World Championship proven performance</li>
-                    <li>• Detections and tracking capabilities for samples in the submersible</li>
-                    <li>• Emergency recovery protocols for robot malfunctions</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="mt-8 p-4 bg-accent/10 rounded-xl border border-accent/20">
-                <p className="text-sm text-muted-foreground italic">
-                  Last Updated: October 19, 2025
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+        <section className="pb-16 border-t border-border pt-12">
+          <h2 className="text-2xl font-bold text-primary mb-2">Technical Achievements</h2>
+          <p className="text-muted-foreground mb-10">
+            Key milestones and capabilities of our robot design
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-accent">Autonomous Performance</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>• Advanced 6+0 sample autonomous routine</li>
+                <li>• Precision 0+5 specimen autonomous sequence</li>
+                <li>• Consistent and reliable autonomous execution</li>
+                <li>• Strategic scoring optimization</li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-accent">Competition Features</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>• Level 3 hang capability for maximum points</li>
+                <li>• High-capacity sample and specimen handling</li>
+                <li>• Robust and reliable mechanical design</li>
+                <li>• World Championship proven performance</li>
+                <li>• Detections and tracking capabilities for samples in the submersible</li>
+                <li>• Emergency recovery protocols for robot malfunctions</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-10 text-sm text-muted-foreground italic">
+            Last Updated: October 19, 2025
+          </p>
         </section>
       </div>
       <Footer />

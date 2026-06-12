@@ -117,7 +117,7 @@ const TeamPortfolio: FC = () => {
     return (
         <div className="min-h-screen flex flex-col tech-fade-in">
             <div className="container mx-auto px-4 pt-20 pb-12 flex-1">
-                <div className="text-center mb-16 mt-10 circuit-bg p-12 rounded-2xl">
+                <div className="text-center mb-16 mt-10 py-16 circuit-bg">
                     <h1 className="text-5xl font-bold gradient-text">Team History</h1>
                     <p className="text-xl text-muted-foreground mt-4">Our journey through the seasons</p>
                 </div>
@@ -125,7 +125,7 @@ const TeamPortfolio: FC = () => {
                 {seasons.map((season, index) => (
                     <motion.section
                         key={index}
-                        className="mb-16 bg-gradient-tech p-6 rounded-xl border border-border hover:border-primary/50 hover:shadow-tech transition-all duration-300"
+                        className="mb-20 border-t border-border pt-12"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.2, duration: 0.6 }}
@@ -138,14 +138,14 @@ const TeamPortfolio: FC = () => {
                                     key={idx}
                                     src={img}
                                     alt={`${season.title} Image ${idx + 1}`}
-                                    className="w-full h-48 object-cover rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 hover:brightness-110"
+                                    className="w-full h-48 object-cover cursor-pointer transition-transform duration-300 hover:scale-105 hover:brightness-110"
                                 />
                             ))}
                         </div>
 
                         {season.quickStats && (
-                            <div className="mb-6 p-4 rounded-lg border border-border bg-card/50 shadow-inner">
-                                <h3 className="text-xl font-semibold mb-4 text-center text-primary">Quick Stats</h3>
+                            <div className="mb-8">
+                                <h3 className="text-xl font-semibold mb-6 text-center text-primary">Quick Stats</h3>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-foreground">
                                     {[
                                         { label: "Total", key: "totalNP" },
@@ -158,7 +158,7 @@ const TeamPortfolio: FC = () => {
                                         return (
                                             <div
                                                 key={idx}
-                                                className="bg-card rounded-lg p-3 flex flex-col items-center justify-center border border-border hover:border-primary/50 transition-all duration-200"
+                                                className="flex flex-col items-center justify-center"
                                             >
                                                 <p className="font-medium mb-1 text-center">{label}</p>
                                                 <p className="text-lg font-bold mb-1 text-center">{value}</p>
@@ -176,7 +176,7 @@ const TeamPortfolio: FC = () => {
                                 onClick={() =>
                                     setOpenIndex(openIndex === index ? null : index)
                                 }
-                                className="w-full text-left font-medium text-lg mb-2 py-2 px-4 bg-card text-foreground rounded-lg border border-border hover:border-primary/50 hover:shadow-tech transition-all duration-200"
+                                className="w-full text-left font-medium text-lg mb-2 py-2 text-primary underline-offset-4 hover:underline transition-all duration-200"
                             >
                                 {openIndex === index ? "Hide Achievements" : "View Achievements"}
                             </button>

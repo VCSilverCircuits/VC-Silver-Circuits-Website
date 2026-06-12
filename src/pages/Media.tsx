@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play, Youtube, Facebook, Instagram, Download } from "lucide-react";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
@@ -40,53 +39,46 @@ const Media = () => {
         <div className="flex flex-col min-h-screen pt-20 tech-fade-in">
             <div className="flex-1">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
+                    <div className="text-center py-16 mb-16 circuit-bg">
                         <h1 className="text-5xl font-bold mb-6 gradient-text">Media & Videos</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                             Explore our team’s journey through videos from past and current competitions.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-[1fr_auto_1fr] gap-8 items-center max-w-6xl mx-auto">
+                    <div className="grid md:grid-cols-[1fr_auto_1fr] gap-8 items-start max-w-6xl mx-auto">
                         <div>
-                            <h2 className="text-3xl font-semibold text-primary mb-8 text-center">FTC Decode Cheatsheet</h2>
-                            <Card className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
-                                <CardHeader>
-                                    <CardTitle className="text-xl text-primary">Download Cheatsheet</CardTitle>
-                                    <CardDescription>
-                                        Download the FTC Decode cheatsheet in PDF or PNG format
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent className="space-y-4">
-                                    <div className="w-full aspect-[3/4] rounded-lg overflow-hidden border border-border">
-                                        <img 
-                                            src={cheatSheetPng} 
-                                            alt="FTC Decode Cheatsheet Preview" 
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                    <div className="flex gap-3">
-                                        <Button variant="hero" asChild className="flex-1">
-                                            <a
-                                                href={cheatSheetPdf}
-                                                download="FTC-Decode-CheatSheet.pdf"
-                                                className="flex items-center justify-center gap-2"
-                                            >
-                                                <Download className="h-4 w-4" /> PDF
-                                            </a>
-                                        </Button>
-                                        <Button variant="hero" asChild className="flex-1">
-                                            <a
-                                                href={cheatSheetPng}
-                                                download="FTC-Decode-CheatSheet.png"
-                                                className="flex items-center justify-center gap-2"
-                                            >
-                                                <Download className="h-4 w-4" /> PNG
-                                            </a>
-                                        </Button>
-                                    </div>
-                                </CardContent>
-                            </Card>
+                            <h2 className="text-3xl font-semibold text-primary mb-4 text-center">FTC Decode Cheatsheet</h2>
+                            <p className="text-lg text-muted-foreground text-center mb-8">
+                                Download the FTC Decode cheatsheet in PDF or PNG format
+                            </p>
+                            <div className="w-full aspect-[3/4] overflow-hidden mb-6">
+                                <img
+                                    src={cheatSheetPng}
+                                    alt="FTC Decode Cheatsheet Preview"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="flex gap-3">
+                                <Button variant="hero" asChild className="flex-1">
+                                    <a
+                                        href={cheatSheetPdf}
+                                        download="FTC-Decode-CheatSheet.pdf"
+                                        className="flex items-center justify-center gap-2"
+                                    >
+                                        <Download className="h-4 w-4" /> PDF
+                                    </a>
+                                </Button>
+                                <Button variant="hero" asChild className="flex-1">
+                                    <a
+                                        href={cheatSheetPng}
+                                        download="FTC-Decode-CheatSheet.png"
+                                        className="flex items-center justify-center gap-2"
+                                    >
+                                        <Download className="h-4 w-4" /> PNG
+                                    </a>
+                                </Button>
+                            </div>
                         </div>
 
                         <div className="hidden md:block border-l border-border h-full min-h-[400px]"></div>
@@ -110,28 +102,24 @@ const Media = () => {
                         </Select>
 
                         {current && (
-                            <Card className="mt-6 bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
-                                <CardHeader>
-                                    <CardTitle className="text-2xl text-primary flex items-center gap-2">
-                                        <Play className="h-6 w-6" /> FLL Masterpiece Mission {current.mission}
-                                    </CardTitle>
-                                    <CardDescription>
-                                        Demonstration of Mission {current.mission} from the FLL Masterpiece season.
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <Button variant="hero" asChild>
-                                        <a
-                                            href={`https://youtu.be/${current.videoId}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center gap-2"
-                                        >
-                                            Watch Video <ExternalLink className="h-4 w-4" />
-                                        </a>
-                                    </Button>
-                                </CardContent>
-                            </Card>
+                            <div className="mt-8 border-t border-border pt-8">
+                                <h3 className="text-2xl font-semibold text-primary flex items-center gap-2 mb-2">
+                                    <Play className="h-6 w-6" /> FLL Masterpiece Mission {current.mission}
+                                </h3>
+                                <p className="text-muted-foreground mb-6">
+                                    Demonstration of Mission {current.mission} from the FLL Masterpiece season.
+                                </p>
+                                <Button variant="hero" asChild>
+                                    <a
+                                        href={`https://youtu.be/${current.videoId}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2"
+                                    >
+                                        Watch Video <ExternalLink className="h-4 w-4" />
+                                    </a>
+                                </Button>
+                            </div>
                         )}
                     </div>
                     </div>
@@ -155,8 +143,8 @@ const Media = () => {
                 </div>
             </div>
             <Footer />
-        </div>  
-                    
+        </div>
+
     );
 };
 

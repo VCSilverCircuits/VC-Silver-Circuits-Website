@@ -105,7 +105,7 @@ const Team = () => {
   return (
     <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
+        <div className="text-center py-16 mb-16 circuit-bg">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Meet Our Team</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             These are the passionate individuals who make up the VC Silver Circuits, each bringing unique skills and dedication to our robotics journey.
@@ -114,7 +114,7 @@ const Team = () => {
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">Team Members</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-x-8 gap-y-16">
             {teamMembers.map((member, index) => (
               <TeamMemberCard
                 key={index}
@@ -129,11 +129,11 @@ const Team = () => {
 
         <section>
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">Coaches & Mentors</h2>
-          <div className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech tech-fade-in grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 justify-items-center">
             {coaches.map((coach, index) => (
               <div
                 key={index}
-                className={`w-full border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-tech tech-fade-in ${index === 3 ? "lg:col-span-3" : ""
+                className={`w-full pt-8 border-t border-border tech-fade-in ${index === 3 ? "lg:col-span-3" : ""
                   }`}
               >
                 <h3 className="text-2xl font-bold text-primary mb-2">{coach.name}</h3>

@@ -43,7 +43,7 @@ const SponsorCard: FC<{ sponsor: { logo: string; website: string; name: string }
     href={sponsor.website}
     target="_blank"
     rel="noopener noreferrer"
-    className="flex items-center justify-center p-4 rounded-xl bg-white border border-border hover:border-primary/50 hover:shadow-tech hover:scale-105 transition-all duration-300"
+    className="flex items-center justify-center p-4 bg-white hover:scale-105 transition-all duration-300"
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: index * 0.15, duration: 0.6 }}
@@ -67,7 +67,7 @@ const SponsorSection: FC<{ title: string; sponsors: typeof sponsorsByCategory[ke
 const ThankYouSponsors: FC = () => (
   <div className="min-h-screen flex flex-col tech-fade-in">
     <div className="container mx-auto px-4 pt-20 pb-12 flex flex-col items-center">
-      <div className="text-center mb-12 circuit-bg p-12 rounded-2xl w-full">
+      <div className="text-center mb-12 py-16 circuit-bg w-full">
         <h1 className="text-4xl sm:text-5xl font-bold gradient-text mb-4">Thank You to Our Sponsors and Donors!</h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
           Our team wouldn’t be possible without the generous support of our sponsors. We sincerely appreciate your contribution to our success!

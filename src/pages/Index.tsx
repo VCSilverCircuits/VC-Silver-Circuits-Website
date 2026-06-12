@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Trophy, Users, Zap, ExternalLink, Heart } from "lucide-react";
@@ -232,22 +231,20 @@ const Index = () => {
                     transition={{ delay: index * 0.2, duration: 0.6 }}
                     viewport={{ once: true }}
                   >
-                    <Card className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech group">
-                      <CardContent className="p-8 text-center">
-                        <div className="flex justify-center mb-6 text-accent group-hover:scale-110 transition-transform duration-300">
-                          {achievement.icon}
-                        </div>
-                        <Badge variant="secondary" className="mb-4">
-                          {achievement.highlight}
-                        </Badge>
-                        <h3 className="text-2xl font-bold text-foreground mb-4">
-                          {achievement.title}
-                        </h3>
-                        <p className="text-muted-foreground">
-                          {achievement.description}
-                        </p>
-                      </CardContent>
-                    </Card>
+                    <div className="group text-center px-4">
+                      <div className="flex justify-center mb-6 text-accent group-hover:scale-110 transition-transform duration-300">
+                        {achievement.icon}
+                      </div>
+                      <p className="text-sm font-medium text-accent uppercase tracking-wide mb-4">
+                        {achievement.highlight}
+                      </p>
+                      <h3 className="text-2xl font-bold text-foreground mb-4">
+                        {achievement.title}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {achievement.description}
+                      </p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -270,7 +267,7 @@ const Index = () => {
                 {[teamPhoto2, teamPhoto1].map((photo, i) => (
                   <motion.div
                     key={i}
-                    className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech"
+                    className="group overflow-hidden"
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"

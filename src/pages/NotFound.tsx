@@ -11,25 +11,25 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-200 dark:from-gray-300 dark:to-gray-400 p-6 transition-colors duration-300">
+    <div className="min-h-screen flex items-center justify-center circuit-bg p-6">
       <motion.div
-        className="bg-white dark:bg-gray-100 shadow-xl rounded-2xl p-10 max-w-lg w-full text-center transition-colors duration-300"
+        className="max-w-lg w-full text-center"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         <div className="flex justify-center mb-6">
-          <AlertTriangle className="w-16 h-16 text-yellow-500" />
+          <AlertTriangle className="w-16 h-16 text-accent" />
         </div>
-        <h1 className="text-6xl font-extrabold text-gray-800 dark:text-gray-100 mb-4">
+        <h1 className="text-6xl font-extrabold gradient-text mb-4">
           404
         </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+        <p className="text-lg text-muted-foreground mb-6">
           Oops! Looks like you have stumbled across a non existent conductor.
         </p>
         <Link
           to="/"
-          className="inline-flex items-center gap-2 bg-blue-600 text-white font-medium px-5 py-3 rounded-xl shadow-md hover:bg-blue-700 transition"
+          className="inline-flex items-center gap-2 text-primary font-medium underline-offset-4 hover:underline transition"
         >
           <Home className="w-5 h-5" />
           Patch me back Home

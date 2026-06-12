@@ -1,9 +1,8 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Facebook, ExternalLink, Heart, Instagram, Phone } from "lucide-react";
+import { Mail, ExternalLink, Heart, Phone } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Footer from "@/components/Footer";
@@ -50,7 +49,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
+        <div className="text-center py-16 mb-16 circuit-bg">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Get In Touch</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Have questions about our team? Want to support our robotics journey? Need help or advice on FTC or FLL? We'd love to hear from you!
@@ -58,42 +57,36 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <Card className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
-            <CardHeader>
-              <CardTitle className="text-3xl text-primary">Send Us a Message</CardTitle>
-              <CardDescription className="text-lg">We'll get back to you as soon as possible</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name *</Label>
-                    <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} required className="bg-input border-border focus:border-primary" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name *</Label>
-                    <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} required className="bg-input border-border focus:border-primary" />
-                  </div>
+          <section>
+            <h2 className="text-3xl font-bold text-primary mb-2">Send Us a Message</h2>
+            <p className="text-lg text-muted-foreground mb-8">We'll get back to you as soon as possible</p>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="firstName">First Name *</Label>
+                  <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} required className="bg-input border-border focus:border-primary" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email *</Label>
-                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="bg-input border-border focus:border-primary" />
+                  <Label htmlFor="lastName">Last Name *</Label>
+                  <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} required className="bg-input border-border focus:border-primary" />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
-                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} className="bg-input border-border focus:border-primary resize-none" />
-                </div>
-                <Button type="submit" variant="hero" size="lg" className="w-full">Send Message</Button>
-              </form>
-            </CardContent>
-          </Card>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email">Email *</Label>
+                <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="bg-input border-border focus:border-primary" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="message">Message *</Label>
+                <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} className="bg-input border-border focus:border-primary resize-none" />
+              </div>
+              <Button type="submit" variant="hero" size="lg" className="w-full">Send Message</Button>
+            </form>
+          </section>
 
-          <div className="space-y-8">
-            <Card className="bg-gradient-tech border-border">
-              <CardHeader>
-                <CardTitle className="text-2xl text-primary">Contact Information</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
+          <div className="space-y-12">
+            <section>
+              <h2 className="text-2xl font-bold text-primary mb-6">Contact Information</h2>
+              <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <Mail className="h-6 w-6 text-accent mt-1" />
                   <div>
@@ -103,7 +96,6 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
-
 
                 <div className="flex items-start space-x-4">
                   <Phone className="h-6 w-6 text-accent mt-1" />
@@ -126,20 +118,18 @@ const Contact = () => {
                     </p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </section>
 
-            <Card className="bg-gradient-tech border-border">
-              <CardHeader>
-                <CardTitle className="text-2xl text-primary flex items-center gap-2">
-                  <Heart className="h-6 w-6 text-accent" />
-                  Support Our Team
-                </CardTitle>
-                <CardDescription>Help us continue our robotics journey and reach new heights</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
+            <section className="border-t border-border pt-10">
+              <h2 className="text-2xl font-bold text-primary flex items-center gap-2 mb-2">
+                <Heart className="h-6 w-6 text-accent" />
+                Support Our Team
+              </h2>
+              <p className="text-muted-foreground mb-6">Help us continue our robotics journey and reach new heights</p>
+              <div className="divide-y divide-border">
                 {supportLinks.map((link, index) => (
-                  <div key={index} className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border hover:border-primary/30 transition-all duration-300">
+                  <div key={index} className="flex items-center justify-between py-4">
                     <div>
                       <h3 className={`font-semibold ${link.color}`}>{link.name}</h3>
                       <p className="text-sm text-muted-foreground">{link.description}</p>
@@ -152,25 +142,21 @@ const Contact = () => {
                     </Button>
                   </div>
                 ))}
-              </CardContent>
-            </Card>
+              </div>
+            </section>
 
-            <Card className="bg-gradient-tech border-border">
-              <CardHeader>
-                <CardTitle className="text-2xl text-primary">About FIRST Tech Challenge</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  FIRST Tech Challenge is an extracurricular program for students in grades 7–12 to learn about STEM through hands-on robotics.
-                </p>
-                <Button variant="outline" asChild>
-                  <a href="https://www.firstinspires.org/robotics/ftc" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    Learn More About FIRST
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
+            <section className="border-t border-border pt-10">
+              <h2 className="text-2xl font-bold text-primary mb-4">About FIRST Tech Challenge</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                FIRST Tech Challenge is an extracurricular program for students in grades 7–12 to learn about STEM through hands-on robotics.
+              </p>
+              <Button variant="outline" asChild>
+                <a href="https://www.firstinspires.org/robotics/ftc" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  Learn More About FIRST
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </Button>
+            </section>
           </div>
         </div>
       </div>
