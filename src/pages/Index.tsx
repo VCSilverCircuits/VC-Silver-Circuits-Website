@@ -1,7 +1,5 @@
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -12,21 +10,6 @@ import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.webp";
 import teamPhoto2 from "@/assets/TeamPhotos/team-photo-2.webp";
 
 const Index = () => {
-  const [showIntro, setShowIntro] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 768 });
-
-  useEffect(() => {
-    const seenIntro = sessionStorage.getItem("seenIntro");
-    if (!seenIntro) {
-      setShowIntro(true);
-      const timer = setTimeout(() => {
-        setShowIntro(false);
-        sessionStorage.setItem("seenIntro", "true");
-      }, isMobile ? 1500 : 2500);
-      return () => clearTimeout(timer);
-    }
-  }, [isMobile]);
-
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0 },
@@ -55,44 +38,7 @@ const Index = () => {
 
   return (
     <>
-      <AnimatePresence>
-        {showIntro && (
-          <motion.div
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.6 } }}
-          >
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: isMobile ? 0.6 : 1, ease: "easeOut" }}
-              className="text-5xl md:text-7xl font-bold gradient-text"
-            >
-              VC Silver Circuits
-            </motion.h1>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="spinner"
-            />
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-lg text-white mt-4"
-            >
-              Loading your experience...
-            </motion.p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {!showIntro && (
-        <div className="min-h-screen">
+      <div className="min-h-screen">
           <motion.section
             className="relative min-h-[80dvh] sm:min-h-[100dvh] flex items-center justify-center overflow-hidden"
             initial="hidden"
@@ -361,7 +307,6 @@ const Index = () => {
 
           <Footer />
         </div>
-      )}
     </>
   );
 };
