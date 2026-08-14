@@ -27,10 +27,10 @@ const PowerPlayRobot = () => {
   return (
     <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center py-16 mb-16 circuit-bg">
-          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: EVE</h1>
+        <div className="text-center py-16 mb-16">
+          <h1 className="text-5xl font-bold mb-6">Our Robot: EVE</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Built for the 2022–2023 Power Play season, EVE showcases our team's commitment to precision and performance.
+            EVE is the robot we built for the 2022–2023 Power Play season, our first year competing.
           </p>
           <Badge variant="secondary" className="mt-4 text-lg px-4 py-2">
             2022–2023 Power Play Season
@@ -44,7 +44,7 @@ const PowerPlayRobot = () => {
                 <img
                   src={img}
                   alt={`EVE Robot ${index + 1}`}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-64 object-cover"
                 />
               </div>
             ))}
@@ -54,7 +54,7 @@ const PowerPlayRobot = () => {
         <section className="mb-16 border-t border-border pt-12">
           <h2 className="text-3xl font-bold text-primary mb-2">EVE's Performance Highlights</h2>
           <p className="text-lg text-muted-foreground mb-10">
-            A testament to our team's engineering excellence during the Power Play season
+            EVE on the field during the Power Play season
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
             {stats.map((stat, index) => (

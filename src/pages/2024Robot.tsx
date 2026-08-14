@@ -27,10 +27,10 @@ const Robot = () => {
   return (
     <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center py-16 mb-16 circuit-bg">
-          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: Invictus</h1>
+        <div className="text-center py-16 mb-16">
+          <h1 className="text-5xl font-bold mb-6">Our Robot: Invictus</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Built for the 2023–2024 Centerstage season, this robot showcases advanced intake, scoring, and endgame suspension capabilities.
+            Invictus is the robot we built for the 2023–2024 Centerstage season, with a pixel intake, scoring arm, and endgame suspension.
           </p>
           <Badge variant="secondary" className="mt-4 text-lg px-4 py-2">
             2023–2024 Centerstage Season
@@ -43,14 +43,14 @@ const Robot = () => {
               <img
                 src={robot1Image}
                 alt="Center Stage Robot V2"
-                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-80 object-cover"
               />
             </div>
             <div className="group overflow-hidden">
               <img
                 src={robot2Image}
                 alt="Center Stage Robot Competition"
-                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-80 object-cover"
               />
             </div>
           </div>

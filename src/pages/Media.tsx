@@ -39,10 +39,10 @@ const Media = () => {
         <div className="flex flex-col min-h-screen pt-20 tech-fade-in">
             <div className="flex-1">
                 <div className="container mx-auto px-4">
-                    <div className="text-center py-16 mb-16 circuit-bg">
-                        <h1 className="text-5xl font-bold mb-6 gradient-text">Media & Videos</h1>
+                    <div className="text-center py-16 mb-16">
+                        <h1 className="text-5xl font-bold mb-6">Media & Videos</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            Explore our team’s journey through videos from past and current competitions.
+                            Match footage and team videos from past and current seasons.
                         </p>
                     </div>
 

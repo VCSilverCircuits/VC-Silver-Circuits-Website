@@ -12,7 +12,7 @@ const TeamMemberCard = ({ name, image, bio, role }: TeamMemberCardProps) => {
         <img
           src={image}
           alt={name}
-          className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-80 object-cover"
         />
       </div>
       <div className="space-y-2 text-center">

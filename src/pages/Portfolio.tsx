@@ -117,9 +117,9 @@ const TeamPortfolio: FC = () => {
     return (
         <div className="min-h-screen flex flex-col tech-fade-in">
             <div className="container mx-auto px-4 pt-20 pb-12 flex-1">
-                <div className="text-center mb-16 mt-10 py-16 circuit-bg">
-                    <h1 className="text-5xl font-bold gradient-text">Team History</h1>
-                    <p className="text-xl text-muted-foreground mt-4">Our journey through the seasons</p>
+                <div className="text-center mb-16 mt-10 py-16">
+                    <h1 className="text-5xl font-bold">Team History</h1>
+                    <p className="text-xl text-muted-foreground mt-4">Every season since we started, with the portfolios to match</p>
                 </div>
 
                 {seasons.map((season, index) => (
@@ -138,7 +138,7 @@ const TeamPortfolio: FC = () => {
                                     key={idx}
                                     src={img}
                                     alt={`${season.title} Image ${idx + 1}`}
-                                    className="w-full h-48 object-cover cursor-pointer transition-transform duration-300 hover:scale-105 hover:brightness-110"
+                                    className="w-full h-48 object-cover cursor-pointer"
                                 />
                             ))}
                         </div>

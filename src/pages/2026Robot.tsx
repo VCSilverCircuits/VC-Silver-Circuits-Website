@@ -55,11 +55,11 @@ const Robot = () => {
   return (
     <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center py-16 mb-16 circuit-bg">
-            <h1 className="text-5xl font-bold mb-4 gradient-text leading-tight">Our Robot: Vestige</h1>
+        <div className="text-center py-16 mb-16">
+            <h1 className="text-5xl font-bold mb-4 leading-tight">Our Robot: Vestige</h1>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Built for the 2025-2026 Decode season, Vestige represents all of the knowledge and expertise we have gained over the years into one robot.
+            Vestige is our robot for the 2025-2026 Decode season, built on everything we've learned from our first three robots.
           </p>
           <Badge variant="secondary" className="mt-4 text-lg px-4 py-2">
             2025-2026 DECODE Season
@@ -72,14 +72,14 @@ const Robot = () => {
               <img
                 src={robot1Image}
                 alt="Undertow Robot V2"
-                className="w-full h-[28rem] object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-[28rem] object-cover"
               />
             </div>
             <div className="group overflow-hidden">
               <img
                 src={robot2Image}
                 alt="Undertow Robot Competition"
-                className="w-full h-[28rem] object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-[28rem] object-cover"
               />
             </div>
           </div>

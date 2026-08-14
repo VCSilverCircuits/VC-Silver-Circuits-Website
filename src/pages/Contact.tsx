@@ -49,10 +49,10 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center py-16 mb-16 circuit-bg">
-          <h1 className="text-5xl font-bold mb-6 gradient-text">Get In Touch</h1>
+        <div className="text-center py-16 mb-16">
+          <h1 className="text-5xl font-bold mb-6">Get In Touch</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Have questions about our team? Want to support our robotics journey? Need help or advice on FTC or FLL? We'd love to hear from you!
+            Questions about the team, sponsorship, or advice on starting an FTC or FLL team? Send us a message.
           </p>
         </div>
 
@@ -126,7 +126,7 @@ const Contact = () => {
                 <Heart className="h-6 w-6 text-accent" />
                 Support Our Team
               </h2>
-              <p className="text-muted-foreground mb-6">Help us continue our robotics journey and reach new heights</p>
+              <p className="text-muted-foreground mb-6">Donations cover registration fees, parts, and travel to competitions</p>
               <div className="divide-y divide-border">
                 {supportLinks.map((link, index) => (
                   <div key={index} className="flex items-center justify-between py-4">

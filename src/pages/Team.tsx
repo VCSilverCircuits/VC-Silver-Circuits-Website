@@ -105,10 +105,10 @@ const Team = () => {
   return (
     <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center py-16 mb-16 circuit-bg">
-          <h1 className="text-5xl font-bold mb-6 gradient-text">Meet Our Team</h1>
+        <div className="text-center py-16 mb-16">
+          <h1 className="text-5xl font-bold mb-6">Meet Our Team</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            These are the passionate individuals who make up the VC Silver Circuits, each bringing unique skills and dedication to our robotics journey.
+            The students, coaches, and mentors behind the VC Silver Circuits.
           </p>
         </div>
 

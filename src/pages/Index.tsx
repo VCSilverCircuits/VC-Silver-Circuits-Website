@@ -1,20 +1,12 @@
-
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Trophy, Users, Zap, ExternalLink, Heart } from "lucide-react";
+import { Trophy, Users, Zap, ExternalLink } from "lucide-react";
 import Footer from "@/components/Footer";
 import teamHeroImage from "@/assets/TeamPhotos/team-hero.webp";
 import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.webp";
 import teamPhoto2 from "@/assets/TeamPhotos/team-photo-2.webp";
 
 const Index = () => {
-  const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   const achievements = [
     {
       icon: <Trophy className="h-8 w-8" />,
@@ -24,289 +16,184 @@ const Index = () => {
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: "Robot Performance",
-      description: "401 Point High Score",
+      title: "401 Point High Score",
+      description: "Our highest match score to date",
       highlight: "Team Record",
     },
     {
       icon: <Users className="h-8 w-8" />,
-      title: "Team Spirit",
-      description: "13 Strong and Dedicated Team Members",
-      highlight: "Strong",
+      title: "13 Team Members",
+      description: "Plus two coaches and two mentors",
+      highlight: "Team #16158",
     },
   ];
 
   return (
     <>
       <div className="min-h-screen">
-          <motion.section
-            className="relative min-h-[80dvh] sm:min-h-[100dvh] flex items-center justify-center overflow-hidden"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8 }}
-            variants={fadeUp}
-          >
-            <div className="absolute inset-0">
-              <img
-                src={teamHeroImage}
-                alt="VC Silver Circuits Team"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/50" />
+        <section className="relative min-h-[80dvh] sm:min-h-[100dvh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src={teamHeroImage}
+              alt="VC Silver Circuits Team"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/50" />
+          </div>
+
+          <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center pt-20 sm:pt-0">
+            <p className="mb-4 sm:mb-6 text-sm sm:text-lg font-medium text-muted-foreground">
+              FTC Team #16158
+            </p>
+
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 text-foreground">
+              VC Silver Circuits
+            </h1>
+            <p className="text-lg sm:text-2xl font-medium italic text-accent mb-4">
+              "Prospecting for potential, mining for innovation."
+            </p>
+            <p className="text-lg sm:text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto">
+              Virginia City, Nevada
+            </p>
+
+            <p className="text-base sm:text-lg text-white mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
+              We're a FIRST Tech Challenge team from Virginia City, a small
+              town in Storey County, Nevada. The team is ten students, two
+              coaches, and two mentors who build and compete with a robot
+              every season.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/team">Meet Our Team</Link>
+              </Button>
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/into-the-deep-robot">See Our Current Robot</Link>
+              </Button>
             </div>
+          </div>
+        </section>
 
-            <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center pt-20 sm:pt-0">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                variants={fadeUp}
-              >
-                <Badge variant="secondary" className="mb-4 sm:mb-6 text-sm sm:text-lg px-4 sm:px-6 py-1 sm:py-2">
-                  We are FTC Team #16158
-                </Badge>
-              </motion.div>
-
-              <motion.h1
-                className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 gradient-text"
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ delay: 0.2, duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                VC Silver Circuits
-              </motion.h1>
-              <motion.p
-                className="text-lg sm:text-2xl font-medium italic text-accent mb-4"
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ delay: 0.25, duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                "Prospecting for potential, mining for innovation."
-              </motion.p>
-              <motion.p
-                className="text-lg sm:text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto"
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ delay: 0.3, duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                Virginia City, Nevada
-              </motion.p>
-
-              <motion.p
-                className="text-base sm:text-lg text-white mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed"
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ delay: 0.4, duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                We are the VC Silver Circuits, a team participating in the FIRST
-                Tech Challenge program. Our team consists of ten team members,
-                two coaches, and two mentors, dedicated to pursuing knowledge in
-                robotics and engineering. We come from a small town in rural
-                Nevada called Virginia City in Storey County, Nevada, but our passion for robotics is big.
-              </motion.p>
-
-              <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ delay: 0.5, duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <Button variant="hero" size="lg" asChild>
-                  <Link to="/team">Meet Our Team</Link>
-                </Button>
-                <Button variant="hero" size="lg" asChild>
-                  <Link to="/into-the-deep-robot">See Our Current Robot</Link>
-                </Button>
-              </motion.div>
-            </div>
-          </motion.section>
-
-          <motion.section
-            className="py-20 circuit-bg"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8 }}
-            variants={fadeUp}
-          >
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-4xl font-bold mb-8 text-primary">
-                  Our Mission
-                </h2>
-                <p className="text-xl leading-relaxed text-muted-foreground mb-12">
-                  Our mission is to <span className="text-primary font-semibold">raise the level of robotics in Nevada</span> by sharing our knowledge and passion, helping others grow in STEM.
-                  Through collaboration and mentorship, we aim to strengthen our community first.
-                  As a result of this dedication, we strive to <span className="text-accent font-semibold">excel at the Nevada State Championship</span> and earn the opportunity to compete at the <span className="text-accent font-semibold">Worldwide Championship</span>,
-                  showcasing the talent and commitment of our team.
-                </p>
-              </div>
-            </div>
-          </motion.section>
-
-          <section className="py-20">
-            <div className="container mx-auto px-4">
-              <motion.h2
-                className="text-4xl font-bold text-center mb-16 text-primary"
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                Our Achievements
-              </motion.h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {achievements.map((achievement, index) => (
-                  <motion.div
-                    key={index}
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{ delay: index * 0.2, duration: 0.6 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="group text-center px-4">
-                      <div className="flex justify-center mb-6 text-accent group-hover:scale-110 transition-transform duration-300">
-                        {achievement.icon}
-                      </div>
-                      <p className="text-sm font-medium text-accent uppercase tracking-wide mb-4">
-                        {achievement.highlight}
-                      </p>
-                      <h3 className="text-2xl font-bold text-foreground mb-4">
-                        {achievement.title}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {achievement.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <motion.section
-            className="py-20 bg-gradient-tech"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8 }}
-            variants={fadeUp}
-          >
-            <div className="container mx-auto px-4">
-              <h2 className="text-4xl font-bold text-center mb-16 text-primary">
-                Our Team in Action
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-8 text-primary">
+                Our Mission
               </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {[teamPhoto2, teamPhoto1].map((photo, i) => (
-                  <motion.div
-                    key={i}
-                    className="group overflow-hidden"
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{ delay: i * 0.2, duration: 0.6 }}
-                    viewport={{ once: true }}
-                  >
-                    <img
-                      src={photo}
-                      alt="VC Silver Circuits Team"
-                      className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </motion.div>
-                ))}
-              </div>
+              <p className="text-xl leading-relaxed text-muted-foreground mb-12">
+                We want to raise the level of robotics in Nevada by sharing
+                what we learn and helping other teams get started. Closer to
+                home, that means mentoring FLL teams and running outreach in
+                our community. On the field, our goal is to win the Nevada
+                State Championship and get back to Worlds.
+              </p>
             </div>
-          </motion.section>
+          </div>
+        </section>
 
-          <motion.section
-            className="py-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8 }}
-            variants={fadeUp}
-          >
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <Heart className="h-16 w-16 text-accent mx-auto mb-8" />
-                <h2 className="text-4xl font-bold mb-8 text-primary">
-                  Support Our Journey or Ask us Anything!
-                </h2>
-                <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-                  Help us continue our robotics journey and reach new heights.
-                  Your support helps us compete, learn, and inspire the next
-                  generation of STEM leaders. Have questions? We're here to
-                  connect!
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="hero" size="lg" asChild>
-                    <a
-                      href="https://gofund.me/cb49a9f8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      Support on GoFundMe
-                      <ExternalLink className="h-5 w-5" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="lg" asChild>
-                    <Link to="/contact">Get In Touch</Link>
-                  </Button>
+        <section className="py-20 bg-card">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-16 text-primary">
+              Our Achievements
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {achievements.map((achievement) => (
+                <div key={achievement.title} className="text-center px-4">
+                  <div className="flex justify-center mb-6 text-accent">
+                    {achievement.icon}
+                  </div>
+                  <p className="text-sm font-medium text-accent uppercase tracking-wide mb-4">
+                    {achievement.highlight}
+                  </p>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">
+                    {achievement.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {achievement.description}
+                  </p>
                 </div>
-              </div>
+              ))}
             </div>
-          </motion.section>
+          </div>
+        </section>
 
-          <motion.section
-            className="py-20 circuit-bg"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8 }}
-            variants={fadeUp}
-          >
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-4xl font-bold mb-8 text-primary">
-                  About FIRST Tech Challenge
-                </h2>
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  FIRST Tech Challenge is an extracurricular program for
-                  students in grades 7–12 to learn about the fields of science,
-                  technology, engineering, and math (STEM) through hands-on
-                  learning in the field of robotics.
-                </p>
-                <Button variant="outline" size="lg" asChild>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-16 text-primary">
+              Our Team in Action
+            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {[teamPhoto2, teamPhoto1].map((photo, i) => (
+                <img
+                  key={i}
+                  src={photo}
+                  alt="VC Silver Circuits Team"
+                  className="w-full h-80 object-cover"
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-card">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-8 text-primary">
+                Support the Team
+              </h2>
+              <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+                Donations go toward registration fees, robot parts, and travel
+                to competitions. If you have a question for the team, send us
+                a message.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="hero" size="lg" asChild>
                   <a
-                    href="https://www.firstinspires.org/robotics/ftc"
+                    href="https://gofund.me/cb49a9f8"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    Learn More About FIRST Tech Challenge
+                    Support on GoFundMe
                     <ExternalLink className="h-5 w-5" />
                   </a>
                 </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link to="/contact">Get In Touch</Link>
+                </Button>
               </div>
             </div>
-          </motion.section>
+          </div>
+        </section>
 
-          <Footer />
-        </div>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-8 text-primary">
+                About FIRST Tech Challenge
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                FIRST Tech Challenge is a robotics program for students in
+                grades 7 through 12. Teams design, build, and program a robot
+                to compete in a new game each season.
+              </p>
+              <Button variant="outline" size="lg" asChild>
+                <a
+                  href="https://www.firstinspires.org/robotics/ftc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  Learn More About FIRST Tech Challenge
+                  <ExternalLink className="h-5 w-5" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
     </>
   );
 };

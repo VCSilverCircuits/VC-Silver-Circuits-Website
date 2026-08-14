@@ -51,10 +51,10 @@ const Events = () => {
       <div className="flex flex-col min-h-screen tech-fade-in">
         <main className="flex-grow pt-20 pb-12">
           <div className="container mx-auto px-4">
-            <div className="text-center py-16 mb-16 circuit-bg">
-              <h1 className="text-5xl font-bold mb-6 gradient-text">Our Events & Achievements</h1>
+            <div className="text-center py-16 mb-16">
+              <h1 className="text-5xl font-bold mb-6">Our Events & Achievements</h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Following our journey through competitions, from local qualifiers to the World Championship stage.
+                Our competition results, from local qualifiers to the World Championship.
               </p>
             </div>
       {latestEvent && (

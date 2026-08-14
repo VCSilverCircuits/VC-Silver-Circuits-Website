@@ -11,7 +11,7 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center circuit-bg p-6">
+    <div className="min-h-screen flex items-center justify-center p-6">
       <motion.div
         className="max-w-lg w-full text-center"
         initial={{ opacity: 0, y: 40 }}
@@ -21,7 +21,7 @@ const NotFound = () => {
         <div className="flex justify-center mb-6">
           <AlertTriangle className="w-16 h-16 text-accent" />
         </div>
-        <h1 className="text-6xl font-extrabold gradient-text mb-4">
+        <h1 className="text-6xl font-extrabold mb-4">
           404
         </h1>
         <p className="text-lg text-muted-foreground mb-6">

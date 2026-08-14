@@ -40,10 +40,10 @@ const Robot = () => {
   return (
     <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center py-16 mb-16 circuit-bg">
-          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: Undertow</h1>
+        <div className="text-center py-16 mb-16">
+          <h1 className="text-5xl font-bold mb-6">Our Robot: Undertow</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Built for the 2024-2025 INTO THE DEEP season, Undertow represents our team's dedication to engineering excellence and innovative design.
+            Undertow is the robot we built for the 2024-2025 INTO THE DEEP season, and it carried us to a division win at Worlds.
           </p>
           <Badge variant="secondary" className="mt-4 text-lg px-4 py-2">
             2024-2025 INTO THE DEEP Season
@@ -56,14 +56,14 @@ const Robot = () => {
               <img
                 src={robot1Image}
                 alt="Undertow Robot V2"
-                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-80 object-cover"
               />
             </div>
             <div className="group overflow-hidden">
               <img
                 src={robot2Image}
                 alt="Undertow Robot Competition"
-                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-80 object-cover"
               />
             </div>
           </div>
@@ -95,14 +95,14 @@ const Robot = () => {
               <img
                 src={robotV11Image}
                 alt="Undertow V1 Robot Prototype"
-                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-80 object-cover"
               />
             </div>
             <div className="group overflow-hidden">
               <img
                 src={robotV12Image}
                 alt="Undertow V1 Competition Match"
-                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-80 object-cover"
               />
             </div>
           </div>

@@ -47,7 +47,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold gradient-text">VC Silver Circuits</div>
+            <div className="text-2xl font-bold">VC Silver Circuits</div>
             <div className="text-sm text-muted-foreground hidden sm:block">#16158</div>
           </Link>
 
